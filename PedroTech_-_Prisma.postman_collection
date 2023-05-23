@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "5060749f-8418-456c-81dd-96fc9d1efded",
+		"name": "PedroTech  - Prisma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11776082"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/byId/{{EXAMPLE_USERID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"byId",
+						"{{EXAMPLE_USERID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/{{EXAMPLE_USERID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{EXAMPLE_USERID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update username",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"{{EXAMPLE_USERNAME_CHANGED}}\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/{{EXAMPLE_USERID}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{EXAMPLE_USERID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"{{EXAMPLE_USERNAME}}\",\r\n    \"password\": \"{{EXAMPLE_PASSWORD}}\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create multiple Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userList\": [\r\n        {\r\n            \"username\": \"{{EXAMPLE_MANY_USERNAME_1}}\",\r\n            \"password\": \"{{EXAMPLE_PASSWORD}}\"\r\n        },\r\n        {\r\n            \"username\": \"{{EXAMPLE_MANY_USERNAME_2}}\",\r\n            \"password\": \"{{EXAMPLE_PASSWORD}}\"\r\n        },\r\n        {\r\n            \"username\": \"{{EXAMPLE_MANY_USERNAME_3}}\",\r\n            \"password\": \"{{EXAMPLE_PASSWORD}}\"\r\n        }\r\n    ]\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/createMany",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"createMany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create multiple Cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carList\": [\r\n        {\r\n            \"model\": \"Astra\",\r\n            \"year\": 2010,\r\n            \"userId\": 4\r\n        },\r\n        {\r\n            \"model\": \"Mokka\",\r\n            \"year\": 2018,\r\n            \"userId\": 4\r\n        }\r\n    ]\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/createManyCars",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"createManyCars"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "3001",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_USERID",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_USERNAME",
+			"value": "Pedro",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_PASSWORD",
+			"value": "Pass123",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_USERNAME_CHANGED",
+			"value": "Gabriel",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_MANY_USERNAME_1",
+			"value": "Jon",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_MANY_USERNAME_2",
+			"value": "Dilon",
+			"type": "string"
+		},
+		{
+			"key": "EXAMPLE_MANY_USERNAME_3",
+			"value": "Dan",
+			"type": "string"
+		}
+	]
+}

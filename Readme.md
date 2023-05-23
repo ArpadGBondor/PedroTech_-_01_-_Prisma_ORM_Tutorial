@@ -26,3 +26,5 @@
     - Database
         - I'm using `sqlite` instead of `mysql` to simplify the database connection of the project.
             - `prisma\dev.db` file contains the database.
+    - Postman collection added:
+        [PedroTech_-_Prisma](./PedroTech_-_Prisma.postman_collection)
