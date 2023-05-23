@@ -5,7 +5,11 @@
 ## How to run:
 
     - Clone repository
+        -   `git clone  https://github.com/ArpadGBondor/PedroTech_-_01_-_Prisma_ORM_Tutorial.git`
+    - Enter folder:
+        -   `cd PedroTech_-_01_-_Prisma_ORM_Tutorial`
     - Install npm packages
+        -   `npm i`
     - Generate Database
         - `npx prisma migrate dev`
     - Run app
