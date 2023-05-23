@@ -1,0 +1,28 @@
+{
+    "name": "prisma_-_tutorial_01",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "dev": "nodemon index.ts",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate:apply": "prisma migrate dev",
+        "prisma:migrate:add": "prisma migrate dev --name init",
+        "prisma:studio": "prisma studio"
+    },
+    "author": "Arpad G. Bondor",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.2.3",
+        "nodemon": "^2.0.22",
+        "prisma": "^4.14.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@prisma/client": "^4.14.1",
+        "@types/express": "^4.17.17",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2"
+    }
+}
